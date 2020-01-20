@@ -94,8 +94,9 @@ SELECT capital, name
 
 15. Show the name and the extension where the capital is an extension of name of the country.
 ```sql
-SELECT name
+SELECT name, REPLACE(capital, name,'')
   FROM world
  WHERE capital LIKE concat(name,'_%')
+
 
 ```
